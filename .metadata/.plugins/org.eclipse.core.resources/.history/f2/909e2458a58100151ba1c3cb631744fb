@@ -1,0 +1,44 @@
+
+#include "util.h"
+
+
+int errno;
+
+#define REMOTE_ADDRESS "2001:4de0:1::1:1"
+
+
+
+
+
+
+void connectionSetup()
+{
+	int sock = connect();
+}
+
+void connectionLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+
+	}
+}
+
+void connectionMain()
+{
+	connectionSetup();
+	connectionLoop();
+}
+
+void parentCleanup()
+{
+
+}
+
+
+int main(int argc, char **argv)
+{
+	serverSetup();
+	serverLoop();
+}

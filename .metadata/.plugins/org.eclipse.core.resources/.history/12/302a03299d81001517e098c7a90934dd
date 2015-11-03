@@ -1,0 +1,40 @@
+void setup()
+{
+	int sock = setupSocket();
+	listen(sock);
+}
+
+
+void doubleFork(void (*func)())
+{
+	int pid = fork();
+	if (pid == 0){
+		pid = fork();
+		if (pid == 0)
+		{
+			func();
+		}
+	}
+}
+
+void connectionLoop()
+{
+
+}
+
+void listenLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+		int sock = accept();
+		doubleFork(connectionLoop);
+	}
+}
+
+
+int main()
+{
+	setup();
+	listenLoop();
+}

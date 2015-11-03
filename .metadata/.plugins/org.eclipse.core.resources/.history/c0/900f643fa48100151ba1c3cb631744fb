@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <error.h>
+
+int errno;
+
+#define LISTEN_PORT 2537
+#define REMOTE_ADDRESS "2001:4de0:1::1:1"
+
+
+struct {
+	int socket;
+} listenData;
+
+void setupSocket()
+{
+
+}
+
+void listenSetup()
+{
+	setupSocket();
+	listen(listenData);
+}
+
+void doubleFork(void (*childFunc)(), void (*parentFunc)())
+{
+	int pid = fork();
+
+	if (pid == -1)
+	{
+		printf("fork error %d\n", errno);
+		return;
+	}
+
+	if (pid != 0)
+	{
+		parentFunc();
+		return;
+	}
+
+	if (pid == 0)
+	{
+		int gpid = fork();
+
+		if (gpid == -1)
+		{
+			printf("fork error %d\n", errno);
+			return;
+		}
+
+		if (gpid != 0)
+		{
+			return;
+		}
+
+		if (gpid == 0)
+		{
+			func();
+			return;
+		}
+	}
+}
+
+void connectionSetup()
+{
+	int sock = connect();
+}
+
+void connectionLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+
+	}
+}
+
+void connectionMain()
+{
+	connectionSetup();
+	connectionLoop();
+}
+
+void listenLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+		int sock = accept();
+		doubleFork(connectionMain);
+	}
+}
+
+
+int main(int argc, char **argv)
+{
+	listenSetup();
+	listenLoop();
+}

@@ -1,0 +1,60 @@
+struct {
+	int socket;
+} listenData;
+
+
+
+void listenSetup()
+{
+	listenData = setupSocket();
+	listen(listenData);
+}
+
+void doubleFork(void (*func)())
+{
+	int pid = fork();
+	if (pid == 0){
+		pid = fork();
+		if (pid == 0)
+		{
+			func();
+		}
+	}
+}
+
+void connectionSetup()
+{
+	int sock = connect();
+}
+
+void connectionLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+
+	}
+}
+
+void connectionMain()
+{
+	connectionSetup();
+	connectionLoop();
+}
+
+void listenLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+		int sock = accept();
+		doubleFork(connectionMain);
+	}
+}
+
+
+int main()
+{
+	listenSetup();
+	listenLoop();
+}

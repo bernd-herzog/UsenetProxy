@@ -1,0 +1,29 @@
+/*
+ * client.c
+ *
+ *  Created on: 02.11.2015
+ *      Author: j39f3fs
+ */
+
+
+#define REMOTE_ADDRESS "2001:4de0:1::1:1"
+
+void connectionSetup()
+{
+	int sock = connect();
+}
+
+void connectionLoop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+
+	}
+}
+
+void connectionMain()
+{
+	connectionSetup();
+	connectionLoop();
+}

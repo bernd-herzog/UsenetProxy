@@ -1,0 +1,5 @@
+newsproxy:
+	cc *.c -o newsproxy
+
+clean:
+	rm -fr *.o newsproxy

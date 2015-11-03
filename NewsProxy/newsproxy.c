@@ -247,6 +247,3 @@ void closeConnection(int news_sock, int client_sock){
 	close(client_sock);
 	//printf("closed a connection\n");
 }
-
-
-

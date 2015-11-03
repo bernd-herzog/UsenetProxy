@@ -1,0 +1,15 @@
+#include "server.h"
+
+#define LISTEN_PORT 2537
+
+
+void setupSocket()
+{
+
+}
+
+void listenSetup()
+{
+	setupSocket();
+	listen(listenData);
+}

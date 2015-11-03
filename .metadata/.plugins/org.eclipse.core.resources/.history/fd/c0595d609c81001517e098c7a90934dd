@@ -1,0 +1,22 @@
+void setup()
+{
+	socket();
+	listen();
+}
+
+void loop()
+{
+	int running = 1;
+	while (running == 1)
+	{
+		accept();
+		fork();
+	}
+}
+
+
+int main()
+{
+	setup();
+	loop();
+}

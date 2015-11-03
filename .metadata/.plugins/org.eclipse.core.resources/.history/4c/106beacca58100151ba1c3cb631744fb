@@ -1,0 +1,5 @@
+all:
+	cc main.c -o newsproxy
+
+clean:
+	rm -fr *.o newsproxy
