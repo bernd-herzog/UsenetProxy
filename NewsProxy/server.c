@@ -16,7 +16,36 @@ struct {
 	int connection;
 } server;
 
-void setupListenSocket()
+void serverSetup();
+void createListenSocket();
+void bindListenSocket();
+void listenListenSocket();
+void serverLoop();
+void clientFunc();
+
+void serverMain()
+{
+  serverSetup();
+  serverLoop();
+}
+
+void serverSetup()
+{
+	createListenSocket();
+	bindListenSocket();
+	listenListenSocket();
+}
+
+void createListenSocket()
+{
+	if ((server.socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) <= 0)
+	{
+		perror("sock");
+		return;
+	}
+}
+
+void bindListenSocket()
 {
 	struct sockaddr_in local_addr4;
 	memset( &local_addr4, 0, sizeof(local_addr4));
@@ -25,12 +54,8 @@ void setupListenSocket()
 	local_addr4.sin_port 	= htons(LISTEN_PORT);
 	local_addr4.sin_addr.s_addr = inet_addr(LISTEN_ADDRESS);
 
-	if ((server.socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) <= 0){
-		perror("sock");
-		return;
-	}
-
-	if (bind (server.socket, (struct sockaddr*)&local_addr4, sizeof(local_addr4)) < 0){
+	if (bind (server.socket, (struct sockaddr*)&local_addr4, sizeof(local_addr4)) < 0)
+	{
 		perror("bind");
 		printf("port busy (%d)?, waiting ", errno);
 		while (bind (server.socket, (struct sockaddr*)&local_addr4, sizeof(local_addr4)) < 0){
@@ -41,21 +66,13 @@ void setupListenSocket()
 	}
 }
 
-void serverSetup()
+void listenListenSocket()
 {
-	setupListenSocket();
-
-	if (listen(server.socket, 300) < 0){
+	if (listen(server.socket, 300) < 0)
+	{
 		perror("listen");
 		return;
 	}
-}
-
-void clientFunc()
-{
-	close(server.socket);
-
-	clientMain(server.connection);
 }
 
 void serverLoop()
@@ -71,4 +88,10 @@ void serverLoop()
 		doubleFork(clientFunc);
 		close(server.connection);
 	}
+}
+
+void clientFunc()
+{
+	close(server.socket);
+	clientMain(server.connection);
 }
