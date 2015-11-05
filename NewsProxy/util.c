@@ -13,7 +13,7 @@ void doubleFork(void (*childFunc)())
 	if (pid == -1)
 	{
 		printf("fork error %d\n", errno);
-		return;
+		exit(0);
 	}
 
 	if (pid != 0)
@@ -28,19 +28,18 @@ void doubleFork(void (*childFunc)())
 		if (gpid == -1)
 		{
 			printf("fork error %d\n", errno);
-			return;
+			exit(0);
 		}
 
 		if (gpid != 0)
 		{
-			return;
+			exit(0);
 		}
 
 		if (gpid == 0)
 		{
 			childFunc();
 			exit(0);
-			return;
 		}
 	}
 }

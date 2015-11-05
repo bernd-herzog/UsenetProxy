@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <error.h>
+#include <stdlib.h>
 
 #include "server.h"
 #include "client.h"
@@ -41,7 +42,7 @@ void createListenSocket()
 	if ((server.socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) <= 0)
 	{
 		perror("sock");
-		return;
+		exit(0);
 	}
 }
 
@@ -71,7 +72,7 @@ void listenListenSocket()
 	if (listen(server.socket, 300) < 0)
 	{
 		perror("listen");
-		return;
+		exit(0);
 	}
 }
 
@@ -82,7 +83,7 @@ void serverLoop()
 	{
 		if ((server.connection = accept(server.socket, NULL, NULL)) == -1){
 			perror("accept");
-			return;
+			exit(0);
 		}
 
 		doubleFork(clientFunc);
