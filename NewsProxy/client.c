@@ -30,6 +30,8 @@ void removeUniqueAddress();
 
 void clientMain(int connectionSocket)
 {
+	printf("clientMain\n");
+
 	clientSetup(connectionSocket);
 	clientLoop();
 	clientShutdown();
@@ -37,6 +39,8 @@ void clientMain(int connectionSocket)
 
 void clientSetup(int socket)
 {
+	printf("clientSetup\n");
+
 	client.socket = socket;
 
 	createRemoteSocket();
@@ -51,6 +55,8 @@ void clientSetup(int socket)
 
 void createRemoteSocket()
 {
+	printf("createRemoteSocket\n");
+
 	if ((client.remoteSocket = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP)) <= 0)
 	{
 		perror("socket");
@@ -60,6 +66,8 @@ void createRemoteSocket()
 
 void getUniqueAddress()
 {
+	printf("getUniqueAddress\n");
+
 	struct ifreq ifr;
 
 	ifr.ifr_addr.sa_family = AF_INET6;
@@ -83,6 +91,8 @@ void getUniqueAddress()
 
 void bindRemoteSocket()
 {
+	printf("bindRemoteSocket\n");
+
 	struct sockaddr_in6 local_addr6;
 	memset( &local_addr6, 0, sizeof(local_addr6));
 	//local_addr6.sin6_len 	= sizeof(local_addr6);
@@ -101,6 +111,8 @@ void bindRemoteSocket()
 
 void connectRemoteSocket()
 {
+	printf("connectRemoteSocket\n");
+
 	struct sockaddr_in6 news_addr;
 	memset( &news_addr, 0, sizeof(news_addr));
 	//news_addr.sin6_len 		= sizeof(news_addr);
@@ -118,6 +130,8 @@ void connectRemoteSocket()
 
 void clientLoop()
 {
+	printf("clientLoop\n");
+
 	printf("connection %d\n", client.socket);
 
 	int running = 1;
@@ -147,6 +161,8 @@ void clientLoop()
 
 void forwardPacket(int src, int dst)
 {
+	printf("forwardPacket\n");
+
 	int len;
 	char nbuf[64*1024];
 
@@ -165,6 +181,8 @@ void forwardPacket(int src, int dst)
 
 void clientShutdown()
 {
+	printf("clientShutdown\n");
+
 	shutdown(client.socket, SHUT_RDWR);
 	shutdown(client.remoteSocket, SHUT_RDWR);
 
@@ -176,5 +194,6 @@ void clientShutdown()
 
 void removeUniqueAddress()
 {
+	printf("removeUniqueAddress\n");
 
 }

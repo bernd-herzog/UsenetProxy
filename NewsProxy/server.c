@@ -26,12 +26,16 @@ void clientFunc();
 
 void serverMain()
 {
-  serverSetup();
-  serverLoop();
+	printf("serverMain\n");
+
+	serverSetup();
+	serverLoop();
 }
 
 void serverSetup()
 {
+	printf("serverSetup\n");
+
 	createListenSocket();
 	bindListenSocket();
 	listenListenSocket();
@@ -39,6 +43,8 @@ void serverSetup()
 
 void createListenSocket()
 {
+	printf("createListenSocket\n");
+
 	if ((server.socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) <= 0)
 	{
 		perror("sock");
@@ -48,6 +54,8 @@ void createListenSocket()
 
 void bindListenSocket()
 {
+	printf("bindListenSocket\n");
+
 	struct sockaddr_in local_addr4;
 	memset( &local_addr4, 0, sizeof(local_addr4));
 	//local_addr4.sin_len 	= sizeof(local_addr4);
@@ -69,6 +77,8 @@ void bindListenSocket()
 
 void listenListenSocket()
 {
+	printf("listenListenSocket\n");
+
 	if (listen(server.socket, 300) < 0)
 	{
 		perror("listen");
@@ -78,6 +88,8 @@ void listenListenSocket()
 
 void serverLoop()
 {
+	printf("serverLoop\n");
+
 	int running = 1;
 	while (running == 1)
 	{
@@ -93,6 +105,8 @@ void serverLoop()
 
 void clientFunc()
 {
+	printf("clientFunc\n");
+
 	close(server.socket);
 	clientMain(server.connection);
 }

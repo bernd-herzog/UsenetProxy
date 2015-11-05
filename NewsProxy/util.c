@@ -8,6 +8,8 @@ int errno;
 
 void doubleFork(void (*childFunc)())
 {
+	printf("doubleFork\n");
+
 	int pid = fork();
 
 	if (pid == -1)
@@ -18,11 +20,15 @@ void doubleFork(void (*childFunc)())
 
 	if (pid != 0)
 	{
+		printf("doubleFork p\n");
+
 		return;
 	}
 
 	if (pid == 0)
 	{
+		printf("doubleFork c\n");
+
 		int gpid = fork();
 
 		if (gpid == -1)
@@ -33,11 +39,13 @@ void doubleFork(void (*childFunc)())
 
 		if (gpid != 0)
 		{
+			printf("doubleFork c:p\n");
 			exit(0);
 		}
 
 		if (gpid == 0)
 		{
+			printf("doubleFork c:c\n");
 			childFunc();
 			exit(0);
 		}
