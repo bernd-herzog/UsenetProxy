@@ -3,6 +3,8 @@
 #include <string.h>
 #include <netinet/in.h>
 #include <poll.h>
+#include <net/if.h>
+#include <linux/sockios.h>
 
 #include "client.h"
 #include "util.h"
