@@ -5,6 +5,8 @@
 #include <poll.h>
 #include <net/if.h>
 #include <linux/sockios.h>
+#include <sys/types.h>
+#include <ifaddrs.h>
 
 #include "client.h"
 #include "util.h"
@@ -84,6 +86,41 @@ void getUniqueAddress()
 {
 	printf("getUniqueAddress\n");
 
+	struct ifaddrs *sifaddrs;
+    int count = getifaddrs(&sifaddrs);
+
+    for (;sifaddrs != NULL; sifaddrs = sifaddrs->ifa_next)
+    {
+    	if(sifaddrs->ifa_addr->sa_family==AF_INET) {
+			printf("IPv4 ");
+    		struct sockaddr_in *saddr = (struct sockaddr_in *) sifaddrs->ifa_addr;
+
+    	    char addressBuffer[INET6_ADDRSTRLEN];
+
+    		inet_ntop(
+    				AF_INET,
+    				&saddr->sin_addr.s_addr,
+    				addressBuffer,
+					sizeof(addressBuffer));
+
+    		printf("%s\n", addressBuffer);
+
+
+		} else if(sifaddrs->ifa_addr->sa_family==AF_INET6) {
+			printf("IPv6 ");
+    		struct sockaddr_in6 *saddr = (struct sockaddr_in6 *) sifaddrs->ifa_addr;
+
+			printIpv6(&saddr->sin6_addr);
+
+		} else {
+
+		}
+    }
+
+    freeifaddrs(sifaddrs);
+
+	exit(0);
+
 	struct ifreq ifr;
 
 	ifr.ifr_addr.sa_family = AF_INET6;
@@ -101,6 +138,12 @@ void getUniqueAddress()
 	char buf[80];
 	sprintf(buf, "::1");
 	inet_pton(AF_INET6, buf, client.bindAddress);
+}
+
+void client_test()
+{
+	getUniqueAddress();
+
 }
 
 void bindRemoteSocket()

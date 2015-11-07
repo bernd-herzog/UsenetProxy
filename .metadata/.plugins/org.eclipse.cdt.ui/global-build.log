@@ -236,3 +236,485 @@ Makefile:2: recipe for target 'all' failed
 make: *** [all] Error 1
 
 **** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+
+Cannot run program "make": Launching failed
+Error: Program "make" is not found in PATH
+
+PATH=[C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\Windows\System32;]
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+
+Cannot run program "make": Launching failed
+Error: Program "make" is not found in PATH
+
+PATH=[C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\Windows\System32;]
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+make: *** [all] Error 127
+Makefile:2: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+make: *** [all] Error 127
+Makefile:2: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
+
+**** Build of configuration Default for project NewsProxy ****
+
+make all 
+cc main.c util.c server.c client.c -o newsproxy
+make: cc: Command not found
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 127
+
+**** Build Finished ****
