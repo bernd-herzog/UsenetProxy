@@ -3,5 +3,11 @@
 
 make all 
 cc main.c util.c server.c client.c -o newsproxy
+client.c:7:27: fatal error: linux/sockios.h: No such file or directory
+ #include <linux/sockios.h>
+                           ^
+compilation terminated.
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 1
 
 **** Build Finished ****

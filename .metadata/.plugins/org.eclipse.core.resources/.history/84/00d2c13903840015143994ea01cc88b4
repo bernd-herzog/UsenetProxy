@@ -1,0 +1,3 @@
+echo hu
+scp *.c *.h lisa:~/UsenetProxy/NewsProxy
+ssh -t lisa "cd ~/UsenetProxy/NewsProxy; make"

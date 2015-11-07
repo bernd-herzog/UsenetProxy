@@ -64,6 +64,22 @@ void createRemoteSocket()
 	}
 }
 
+
+
+void printIpv6(struct in6_addr *addr) {
+   printf("%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x\n",
+                 (int)addr->s6_addr[0], (int)addr->s6_addr[1],
+                 (int)addr->s6_addr[2], (int)addr->s6_addr[3],
+                 (int)addr->s6_addr[4], (int)addr->s6_addr[5],
+                 (int)addr->s6_addr[6], (int)addr->s6_addr[7],
+                 (int)addr->s6_addr[8], (int)addr->s6_addr[9],
+                 (int)addr->s6_addr[10], (int)addr->s6_addr[11],
+                 (int)addr->s6_addr[12], (int)addr->s6_addr[13],
+                 (int)addr->s6_addr[14], (int)addr->s6_addr[15]);
+}
+
+
+
 void getUniqueAddress()
 {
 	printf("getUniqueAddress\n");
@@ -72,17 +88,15 @@ void getUniqueAddress()
 
 	ifr.ifr_addr.sa_family = AF_INET6;
 	strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);
+	printf("getUniqueAddress2\n");
 
 	ioctl(client.socket, SIOCGIFADDR, &ifr);
-	ioctl(client.socket, SIOCGIFNETMASK, &ifr);
-
 	struct sockaddr_in6 *ipv6Addr = (struct sockaddr_in6 *) &ifr.ifr_addr;
+	printIpv6(&ipv6Addr->sin6_addr);
+
+	ioctl(client.socket, SIOCGIFNETMASK, &ifr);
 	struct sockaddr_in6 *ipv6NetMask = (struct sockaddr_in6 *) &ifr.ifr_netmask;
-
-	//ipv6Addr->sin6_addr.s6_addr;
-
-	printf("ip: %s\n", inet_ntoa(ipv6Addr->sin6_addr));
-	printf("net: %s\n", inet_ntoa(ipv6NetMask->sin6_addr));
+	printIpv6(&ipv6NetMask->sin6_addr);
 
 	char buf[80];
 	sprintf(buf, "::1");
